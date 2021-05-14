@@ -1,5 +1,6 @@
 import getColor from './lib/Color';
 import styled from 'styled-components/macro';
+import PropTypes from 'prop-types';
 export default function ProfessorEich({ name, type, fromEichToLiberty }) {
   return (
     <BallWrapper background={getColor(type)}>
@@ -31,3 +32,9 @@ const BallWrapper = styled.section`
     border-color: ivory;
   }
 `;
+
+ProfessorEich.propTypes = {
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  fromEichToLiberty: PropTypes.func,
+}

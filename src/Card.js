@@ -1,6 +1,8 @@
 import getColor from './lib/Color';
 import styled from 'styled-components/macro';
+import PropTypes from 'prop-types';
 import Pokeball from './images/pokeball.svg';
+
 export default function Card(props) {
   // const name = props.name;
   // const type = props.type
@@ -43,6 +45,14 @@ const CardWrapper = styled.article`
     transition: transform ease-in 0.3s;
   }
 `;
+
+// Fehlerprophylaxe für Devs und Dokumentation
+Card.propTypes = {
+  name: PropTypes.string.isRequired,
+  type: PropTypes.string,
+  sendToProfessorEich: PropTypes.func,
+};
+
 // function getColor(element) {
 //   let backgroundColor = '';
 //   if (element === 'Elektro') {
@@ -74,4 +84,5 @@ const CardWrapper = styled.article`
 //       backgroundColor = 'grey';
 //   }
 //   return backgroundColor;
+// }
 // }

@@ -1,4 +1,4 @@
-import './App.css';
+//import './App.css';
 import { useState } from 'react';
 import Card from './Card';
 import styled from 'styled-components/macro';
@@ -62,10 +62,12 @@ function App() {
     </div>
   );
 }
+
 const ImageWrapper = styled.section`
   display: grid;
   place-items: center;
 `;
+
 const EichWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
@@ -73,8 +75,11 @@ const EichWrapper = styled.section`
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  
   img {
     width: 8rem;
   }
 `;
+
+
 export default App;
